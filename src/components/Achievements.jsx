@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, ZoomIn } from "lucide-react";
 import { getAchievements } from "../services/achievementsService";
+import ImageModal from "./ImageModal";
 import "./Achievements.css";
 
 const fadeUp = {
@@ -15,6 +16,7 @@ const fadeUp = {
 
 export default function Achievements() {
   const [achievements, setAchievements] = useState([]);
+  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     getAchievements().then(setAchievements);
@@ -56,13 +58,21 @@ export default function Achievements() {
               custom={0.1 + index * 0.08}
               variants={fadeUp}
             >
-              <div className="achievement-image">
+              <button
+                type="button"
+                className="achievement-image"
+                onClick={() => setSelected(achievement)}
+                aria-label={`View full image of ${achievement.title}`}
+              >
                 <img
                   src={achievement.image}
                   alt={achievement.title}
                   loading="lazy"
                 />
-              </div>
+                <span className="achievement-image-overlay">
+                  <ZoomIn size={20} />
+                </span>
+              </button>
               <div className="achievement-body">
                 <h3>{achievement.title}</h3>
                 <p>{achievement.description}</p>
@@ -82,6 +92,16 @@ export default function Achievements() {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selected && (
+          <ImageModal
+            image={selected.image}
+            title={selected.title}
+            onClose={() => setSelected(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
