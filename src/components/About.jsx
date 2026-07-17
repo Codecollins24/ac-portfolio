@@ -23,9 +23,10 @@ export default function About() {
   if (!about) return <section id="about" className="section" />;
 
   return (
-    <section id="about" className="section">
+    <section id="about" className="section" aria-labelledby="about-heading">
       <div className="container">
         <motion.h2
+          id="about-heading"
           className="section-heading"
           initial="hidden"
           whileInView="visible"

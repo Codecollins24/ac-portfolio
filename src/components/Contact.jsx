@@ -65,9 +65,10 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section" aria-labelledby="contact-heading">
       <div className="container">
         <motion.h2
+          id="contact-heading"
           className="section-heading"
           initial="hidden"
           whileInView="visible"

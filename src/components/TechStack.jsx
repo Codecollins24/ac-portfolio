@@ -20,9 +20,10 @@ export default function TechStack() {
   }, []);
 
   return (
-    <section id="tech-stack" className="section">
+    <section id="tech-stack" className="section" aria-labelledby="tech-stack-heading">
       <div className="container">
         <motion.h2
+          id="tech-stack-heading"
           className="section-heading"
           initial="hidden"
           whileInView="visible"

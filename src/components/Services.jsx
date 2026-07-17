@@ -22,9 +22,10 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" className="section">
+    <section id="services" className="section" aria-labelledby="services-heading">
       <div className="container">
         <motion.h2
+          id="services-heading"
           className="section-heading"
           initial="hidden"
           whileInView="visible"

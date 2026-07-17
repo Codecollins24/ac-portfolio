@@ -33,7 +33,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section className="stats section" ref={ref}>
+    <section className="stats section" ref={ref} aria-label="Quick statistics">
       <div className="container stats-grid">
         {stats.map((stat, index) => (
           <StatItem

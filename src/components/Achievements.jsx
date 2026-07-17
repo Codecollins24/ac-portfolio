@@ -21,9 +21,10 @@ export default function Achievements() {
   }, []);
 
   return (
-    <section id="achievements" className="section">
+    <section id="achievements" className="section" aria-labelledby="achievements-heading">
       <div className="container">
         <motion.h2
+          id="achievements-heading"
           className="section-heading"
           initial="hidden"
           whileInView="visible"

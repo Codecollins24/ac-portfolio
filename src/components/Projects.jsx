@@ -21,9 +21,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section" aria-labelledby="projects-heading">
       <div className="container">
         <motion.h2
+          id="projects-heading"
           className="section-heading"
           initial="hidden"
           whileInView="visible"
