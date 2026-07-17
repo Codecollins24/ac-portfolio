@@ -1,0 +1,39 @@
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.tech-card {
+  padding: var(--space-5);
+}
+
+.tech-card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.tech-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.tech-level {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.tech-bar-track {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.tech-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+}

@@ -5,6 +5,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import About from './components/About'
+import Services from './components/Services'
+import TechStack from './components/TechStack'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -23,6 +25,8 @@ function App() {
           <Hero />
           <Stats />
           <About />
+          <Services />
+          <TechStack />
         </>
       )}
     </>

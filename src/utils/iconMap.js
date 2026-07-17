@@ -7,6 +7,7 @@ import {
   Code2,
   Smartphone,
   ShieldCheck,
+  ExternalLink,
 } from "lucide-react";
 
 export const ICON_MAP = {
@@ -18,6 +19,7 @@ export const ICON_MAP = {
   Code2,
   Smartphone,
   ShieldCheck,
+  ExternalLink,
 };
 
 export function getIcon(name) {
