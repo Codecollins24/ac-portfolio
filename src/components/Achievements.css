@@ -1,0 +1,46 @@
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.achievement-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.achievement-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+.achievement-body h3 {
+  font-size: var(--fs-base);
+  font-weight: 700;
+}
+
+.achievement-body p {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  flex: 1;
+}
+
+.achievement-link {
+  align-self: flex-start;
+}

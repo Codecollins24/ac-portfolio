@@ -7,6 +7,8 @@ import Stats from './components/Stats'
 import About from './components/About'
 import Services from './components/Services'
 import TechStack from './components/TechStack'
+import Projects from './components/Projects'
+import Achievements from './components/Achievements'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -27,6 +29,8 @@ function App() {
           <About />
           <Services />
           <TechStack />
+          <Projects />
+          <Achievements />
         </>
       )}
     </>
