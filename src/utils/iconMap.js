@@ -8,6 +8,10 @@ import {
   Smartphone,
   ShieldCheck,
   ExternalLink,
+  Mail,
+  Phone,
+  MessageCircle,
+  Link as LinkIcon,
 } from "lucide-react";
 
 export const ICON_MAP = {
@@ -20,6 +24,10 @@ export const ICON_MAP = {
   Smartphone,
   ShieldCheck,
   ExternalLink,
+  Mail,
+  Phone,
+  MessageCircle,
+  LinkIcon,
 };
 
 export function getIcon(name) {

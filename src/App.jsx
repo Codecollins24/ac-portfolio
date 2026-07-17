@@ -9,6 +9,8 @@ import Services from './components/Services'
 import TechStack from './components/TechStack'
 import Projects from './components/Projects'
 import Achievements from './components/Achievements'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -31,6 +33,8 @@ function App() {
           <TechStack />
           <Projects />
           <Achievements />
+          <Contact />
+          <Footer />
         </>
       )}
     </>

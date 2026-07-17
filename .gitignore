@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Environment variables (Formspree endpoint, future API URL)
+.env
+.env.local
+.env.*.local
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
