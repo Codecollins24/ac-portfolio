@@ -3,6 +3,8 @@ import { AnimatePresence } from 'framer-motion'
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Stats from './components/Stats'
+import About from './components/About'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -19,6 +21,8 @@ function App() {
         <>
           <Navbar />
           <Hero />
+          <Stats />
+          <About />
         </>
       )}
     </>
