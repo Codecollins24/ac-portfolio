@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import Loader from './components/Loader'
-import { useTheme } from './hooks/useTheme'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
-  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1100)
@@ -16,16 +16,10 @@ function App() {
     <>
       <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
       {!isLoading && (
-        <main>
-          <h1 className="gradient-text">Ainomugisha Collins</h1>
-          <p>
-            Theme system and loader are live — sections coming in the next
-            phases.
-          </p>
-          <button className="btn btn-secondary" onClick={toggleTheme}>
-            Toggle theme (currently {theme})
-          </button>
-        </main>
+        <>
+          <Navbar />
+          <Hero />
+        </>
       )}
     </>
   )
