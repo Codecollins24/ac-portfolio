@@ -8,8 +8,6 @@ export const techStackData = [
   { name: "MySQL", level: "Intermediate", proficiency: 68 },
   { name: "React", level: "Intermediate", proficiency: 75 },
   { name: "React Native", level: "Intermediate", proficiency: 65 },
-  { name: "Git", level: "Advanced", proficiency: 85 },
   { name: "GitHub", level: "Advanced", proficiency: 85 },
   { name: "REST APIs", level: "Advanced", proficiency: 80 },
-  { name: "Claude Code", level: "Advanced", proficiency: 85 },
 ];
