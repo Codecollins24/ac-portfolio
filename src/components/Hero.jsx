@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { getHeroContent } from "../services/heroService";
 import { getIcon } from "../utils/iconMap";
-import profileCutoutImg from "../assets/images/profile-cutout.png";
+import profileImg from "../assets/images/profile.jpg";
 import "./Hero.css";
 
 const fadeUp = {
@@ -120,15 +120,7 @@ export default function Hero() {
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="hero-visual-backdrop" aria-hidden="true">
-              <span className="hero-visual-ring" />
-              <span className="hero-visual-blob" />
-            </div>
-            <img
-              src={profileCutoutImg}
-              alt="Ainomugisha Collins"
-              className="hero-visual-photo"
-            />
+            <img src={profileImg} alt="Ainomugisha Collins" />
           </motion.div>
         </motion.div>
       </div>
