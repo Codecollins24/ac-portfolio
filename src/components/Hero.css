@@ -100,7 +100,7 @@
 .hero-visual-frame {
   width: min(360px, 100%);
   aspect-ratio: 1;
-  border-radius: var(--radius-lg);
+  border-radius: 50%;
   padding: var(--space-2);
   overflow: hidden;
 }
@@ -109,7 +109,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: calc(var(--radius-lg) - 8px);
+  border-radius: 50%;
 }
 
 @media (max-width: 900px) {
