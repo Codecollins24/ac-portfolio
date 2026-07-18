@@ -59,9 +59,10 @@ export default function Contact() {
       href: `https://wa.me/${contact.whatsapp.replace("+", "")}`,
     },
     { icon: "LinkIcon", label: "GitHub", href: contact.github },
-    contact.linkedin
-      ? { icon: "LinkIcon", label: "LinkedIn", href: contact.linkedin }
-      : { icon: "LinkIcon", label: "LinkedIn (coming soon)", href: null },
+    // Commented out for now — re-enable once the LinkedIn profile is ready.
+    // contact.linkedin
+    //   ? { icon: "LinkIcon", label: "LinkedIn", href: contact.linkedin }
+    //   : { icon: "LinkIcon", label: "LinkedIn (coming soon)", href: null },
   ];
 
   return (
