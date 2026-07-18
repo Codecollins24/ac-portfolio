@@ -22,7 +22,11 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" className="section" aria-labelledby="services-heading">
+    <section
+      id="services"
+      className="section"
+      aria-labelledby="services-heading"
+    >
       <div className="container">
         <motion.h2
           id="services-heading"
@@ -42,8 +46,9 @@ export default function Services() {
           custom={0.1}
           variants={fadeUp}
         >
-          Where I can help — from secure web platforms to mobile apps and
-          security-hardened engineering.
+          I design and develop modern web and mobile applications while applying
+          security best practices to build reliable and resilient software
+          solutions.
         </motion.p>
 
         <div className="services-grid">
