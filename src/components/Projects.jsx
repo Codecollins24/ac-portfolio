@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { ExternalLink, Code2 } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ExternalLink, Code2, Info } from "lucide-react";
 import { getProjects } from "../services/projectsService";
+import ProjectModal from "./ProjectModal";
 import "./Projects.css";
 
 const fadeUp = {
@@ -15,6 +16,7 @@ const fadeUp = {
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const [activeProject, setActiveProject] = useState(null);
 
   useEffect(() => {
     getProjects().then(setProjects);
@@ -76,6 +78,14 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="project-links">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    onClick={() => setActiveProject(project)}
+                  >
+                    <Info size={16} />
+                    Details
+                  </button>
                   {project.github && (
                     <a
                       href={project.github}
@@ -104,6 +114,15 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {activeProject && (
+          <ProjectModal
+            project={activeProject}
+            onClose={() => setActiveProject(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
