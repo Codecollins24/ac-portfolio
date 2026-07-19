@@ -1,11 +1,15 @@
+import noticeboardLogin from "../assets/images/noticeboard-login.jpg";
+import noticeboardAdminView from "../assets/images/noticeboard-admin-view.jpg";
+import noticeboardNoticeDetail from "../assets/images/noticeboard-notice-detail.jpg";
+
 export const projectsData = [
   {
     id: "institution-digital-noticeboard",
     title: "Institution Digital Notice Board",
     description:
       "A role-based digital notice board that replaces physical boards and word-of-mouth with targeted, real-time institutional communication — five user roles, live WebSocket notifications, and RSA-signed notices.",
-    image: null,
-    screenshots: [],
+    image: noticeboardAdminView,
+    screenshots: [noticeboardLogin, noticeboardAdminView, noticeboardNoticeDetail],
     tags: ["React", "Django REST Framework", "Django Channels", "MySQL", "JWT", "WebSockets"],
     demo: "https://institution-digital-noticeboard.vercel.app",
     demoNote:
