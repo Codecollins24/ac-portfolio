@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Sun, Moon, Download } from "lucide-react";
+import { Menu, X, Sun, Moon, Mail } from "lucide-react";
 import { useTheme } from "../hooks/useTheme";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { NAV_LINKS } from "../utils/navLinks";
@@ -53,12 +53,11 @@ export default function Navbar() {
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <a
-            href="/cv/Ainomugisha-Collins-CV.pdf"
-            download
+            href="mailto:ainomugishac082@gmail.com?subject=CV%20Request"
             className="btn btn-primary navbar-cv-btn"
           >
-            <Download size={16} />
-            Download CV
+            <Mail size={16} />
+            Request CV
           </a>
           <button
             className="navbar-icon-btn navbar-menu-btn"

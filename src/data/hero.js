@@ -12,10 +12,9 @@ export const heroData = {
     { label: "View Projects", href: "#projects", variant: "primary" },
     { label: "Contact Me", href: "#contact", variant: "secondary" },
     {
-      label: "Download CV",
-      href: "/cv/Ainomugisha-Collins-CV.pdf",
+      label: "Request CV",
+      href: "mailto:ainomugishac082@gmail.com?subject=CV%20Request",
       variant: "outline",
-      download: true,
     },
   ],
 };
