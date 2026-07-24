@@ -1,6 +1,8 @@
 import noticeboardLogin from "../assets/images/noticeboard-login.jpg";
 import noticeboardAdminView from "../assets/images/noticeboard-admin-view.jpg";
 import noticeboardNoticeDetail from "../assets/images/noticeboard-notice-detail.jpg";
+import smfasSimulator from "../assets/images/smfas-simulator.jpg";
+import smfasHome from "../assets/images/smfas-home.jpg";
 
 export const projectsData = [
   {
@@ -33,14 +35,33 @@ export const projectsData = [
     ],
   },
   {
-    id: "project-two",
-    title: "Project Title Placeholder Two",
+    id: "smfas",
+    title: "SMFAS — SMS Mobile Farmers Advisory System",
     description:
-      "A short description of this project will go here — replace with a real case study once the project is ready to showcase.",
-    image: null,
-    tags: ["Django", "React Native"],
-    github: "#",
-    demo: null,
+      "An SMS-first advisory service that gives farmers instant, expert-curated crop advice — fertilizer rates, disease control, general crop info — across seven crops, reachable by a real SMS gateway or a web simulator.",
+    image: smfasSimulator,
+    screenshots: [smfasHome, smfasSimulator],
+    tags: ["Django", "PostgreSQL", "Africa's Talking SMS API", "REST API"],
+    demo: "https://sms-farmers-advisory-system.onrender.com",
+    demoNote:
+      "Hosted on free-tier infrastructure — the backend sleeps after 15 minutes idle, so the first load can take up to a minute while it wakes up.",
+    codeRequestEmail: "ainomugishac082@gmail.com",
+    role:
+      "Solo developer, built under deadline pressure for the APAC Secondary School ICT Club's NCC 2026 Regional Competition entry, then hardened over two further sessions after the presentation succeeded. Designed the keyword-query engine, modeled the crop-advisory data, and integrated a real SMS gateway alongside a web-based simulator.",
+    features: [
+      "Keyword-based SMS queries (e.g. \"MAIZE FERTILIZER\") answered instantly across seven crops — Maize, Coffee, Bananas, Beans, Cassava, Groundnuts, and Sweet Potatoes",
+      "Two front doors into the same query engine: a phone-mockup web SMS simulator and a real Africa's Talking SMS webhook",
+      "Async delivery-report tracking correlates each outbound SMS with its real delivery status, not just API-accepted status",
+      "QueryLog model records every query — web and SMS alike — powering a live activity feed and observability",
+      "Idempotent data seeding and an idempotent admin-provisioning management command, both safe to rerun on every deploy",
+    ],
+    architecture:
+      "Django backend serving both a plain HTML/CSS/vanilla-JS front end and a REST-style query API, backed by PostgreSQL in production (SQLite locally). Africa's Talking's SDK handles real SMS send/receive against their Sandbox environment, with a shared-secret-protected webhook for inbound messages and delivery reports. Deployed on Render's free tier via `render.yaml`, with WhiteNoise serving static assets and gunicorn as the app server.",
+    challenges: [
+      "Built the whole prototype and got it presentation-ready in a single day against a hard competition deadline",
+      "Africa's Talking's Sandbox blurs 'real' SMS: outbound genuinely delivers to registered test numbers, but inbound is simulated via their dashboard hitting the real webhook — documented this precisely so the demo is never oversold as fully live",
+      "Render's free tier has no shell access, so the usual createsuperuser workflow didn't work — wrote an idempotent management command that provisions the admin account from environment variables on every deploy",
+    ],
   },
   {
     id: "project-three",
