@@ -3,6 +3,8 @@ import noticeboardAdminView from "../assets/images/noticeboard-admin-view.jpg";
 import noticeboardNoticeDetail from "../assets/images/noticeboard-notice-detail.jpg";
 import smfasSimulator from "../assets/images/smfas-simulator.jpg";
 import smfasHome from "../assets/images/smfas-home.jpg";
+import geomarticsHome from "../assets/images/geomartics-home.jpg";
+import geomarticsServices from "../assets/images/geomartics-services.jpg";
 
 export const projectsData = [
   {
@@ -64,13 +66,30 @@ export const projectsData = [
     ],
   },
   {
-    id: "project-three",
-    title: "Project Title Placeholder Three",
+    id: "geomartics",
+    title: "Geomartics — Land Surveying Website",
     description:
-      "A short description of this project will go here — replace with a real case study once the project is ready to showcase.",
-    image: null,
-    tags: ["Python", "Cybersecurity"],
-    github: "#",
-    demo: "#",
+      "A fast, responsive single-page marketing site for a land-surveying business in Lira City, Uganda — services, an about section, and a contact form that opens a pre-filled email, with no backend to maintain.",
+    image: geomarticsHome,
+    screenshots: [geomarticsHome, geomarticsServices],
+    tags: ["React", "Vite", "Tailwind CSS", "Vercel"],
+    demo: "https://geomarticsproject.vercel.app",
+    codeRequestEmail: "ainomugishac082@gmail.com",
+    role:
+      "Solo developer. Designed and built the whole site — layout, branding, copy structure, responsive behavior — and set up deployment so every push to the main branch publishes automatically.",
+    features: [
+      "Single-page layout with six service sections, an about section, a \"why choose us\" section, and clear calls to action throughout",
+      "Contact form that builds a pre-filled mailto message from the visitor's details — no server, database, or form service to maintain",
+      "Navbar that highlights the section currently in view, plus gentle scroll-reveal animations that switch off for visitors who prefer reduced motion",
+      "Responsive hero image served at multiple resolutions, with lazy-loaded images below the fold, and a layout checked down to 375px phone width",
+      "All site copy and contact details live in one content file, so updates never touch component code",
+    ],
+    architecture:
+      "React 19 and Vite single-page app styled with Tailwind CSS v4 and lucide-react icons. No backend: the contact flow is a mailto link and the content is a static data module. Hosted on Vercel, with the GitHub repository connected so pushes to main deploy to production automatically.",
+    challenges: [
+      "Kept every line of copy strictly factual — no invented testimonials, statistics, or certifications — so the site only claims what the business can stand behind",
+      "Delivered a working contact flow without a backend by generating a well-formed, URL-encoded mailto message from the form fields",
+      "Kept the hero fast on slow mobile data by serving responsive image sizes through srcset rather than one large file",
+    ],
   },
 ];
