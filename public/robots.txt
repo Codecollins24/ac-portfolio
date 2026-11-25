@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ac-portfolio.vercel.app/sitemap.xml
+Sitemap: https://ainomugisha-collins.vercel.app/sitemap.xml
