@@ -1,6 +1,6 @@
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-5);
 }
 
@@ -24,6 +24,12 @@
 
 .service-card h3 {
   font-size: var(--fs-lg);
+  margin-bottom: var(--space-3);
+}
+
+.service-card-description {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
   margin-bottom: var(--space-3);
 }
 

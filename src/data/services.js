@@ -30,4 +30,17 @@ export const servicesData = [
       url: "https://www.credly.com/badges/6c73664b-faf2-4a16-95c6-a59ab7113fd5/public_url",
     },
   },
+  {
+    id: "network-technician",
+    icon: "Network",
+    title: "Network Technician",
+    description:
+      "Hands-on experience gained at Globalpath Network, an internet service provider in Lira and Gulu.",
+    items: [
+      "Network design and setup",
+      "Network troubleshooting",
+      "Microwave devices and links",
+      "Optical fibre networks: cabling and splicing",
+    ],
+  },
 ];

@@ -47,8 +47,8 @@ export default function Services() {
           variants={fadeUp}
         >
           I design and develop modern web and mobile applications while applying
-          security best practices to build reliable and resilient software
-          solutions.
+          security best practices, and I bring hands-on network technician
+          experience to keep systems connected and reliable.
         </motion.p>
 
         <div className="services-grid">
@@ -68,6 +68,11 @@ export default function Services() {
                   {Icon && <Icon size={22} />}
                 </div>
                 <h3>{service.title}</h3>
+                {service.description && (
+                  <p className="service-card-description">
+                    {service.description}
+                  </p>
+                )}
                 <ul>
                   {service.items.map((item) => (
                     <li key={item}>{item}</li>
