@@ -16,7 +16,7 @@ const fadeUp = {
 function buildMailto(contact, formData) {
   const subject = encodeURIComponent(`Portfolio inquiry from ${formData.name || "a visitor"}`);
   const body = encodeURIComponent(
-    `${formData.message}\n\n— ${formData.name} (${formData.email})`
+    `${formData.message}\n\nFrom: ${formData.name} (${formData.email})`
   );
   return `mailto:${contact.email}?subject=${subject}&body=${body}`;
 }
@@ -59,7 +59,7 @@ export default function Contact() {
       href: `https://wa.me/${contact.whatsapp.replace("+", "")}`,
     },
     { icon: "LinkIcon", label: "GitHub", href: contact.github },
-    // Commented out for now — re-enable once the LinkedIn profile is ready.
+    // Commented out for now: re-enable once the LinkedIn profile is ready.
     // contact.linkedin
     //   ? { icon: "LinkIcon", label: "LinkedIn", href: contact.linkedin }
     //   : { icon: "LinkIcon", label: "LinkedIn (coming soon)", href: null },
@@ -179,7 +179,7 @@ export default function Contact() {
 
             {status === "success" && (
               <p className="contact-form-status is-success">
-                Message sent — thank you! I'll get back to you soon.
+                Message sent. Thank you! I'll get back to you soon.
               </p>
             )}
             {status === "error" && (

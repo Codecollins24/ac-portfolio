@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
 
-  /* Surfaces & text — dark theme is the default */
+  /* Surfaces & text: dark theme is the default */
   --color-bg: #0b0d12;
   --color-bg-elevated: #12151c;
   --color-surface: rgba(255, 255, 255, 0.04);

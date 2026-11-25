@@ -3,6 +3,7 @@ import uccWinnerImg from "../assets/images/ucc-winner-cyberstars.jpg";
 import uccCertificateImg from "../assets/images/ucc-certificate.jpg";
 import membershipImg from "../assets/images/membership-certificate.jpg";
 import debateImg from "../assets/images/debate-certificate.jpg";
+import makerereIncubationImg from "../assets/images/makerere-incubation-certificate.jpg";
 
 export const achievementsData = [
   {
@@ -16,7 +17,7 @@ export const achievementsData = [
   },
   {
     id: "ucc-winner-cyberstars",
-    title: "UCC Winner — Third Cyber Stars Competition 2025",
+    title: "UCC Winner: Third Cyber Stars Competition 2025",
     description:
       "National winner in the Uganda Communications Commission's Third Cyber Stars Competition 2025.",
     image: uccWinnerImg,
@@ -25,7 +26,7 @@ export const achievementsData = [
   },
   {
     id: "ucc-certificate",
-    title: "Certificate of Recognition — National Final, Third Cyber Stars Competition 2025",
+    title: "Certificate of Recognition: National Final, Third Cyber Stars Competition 2025",
     description:
       "Awarded for outstanding performance at the national final of the Third Cyber Stars Competition 2025.",
     image: uccCertificateImg,
@@ -45,6 +46,15 @@ export const achievementsData = [
     title: "Debate Participation Certificate",
     description: "Certificate of participation in a debate competition.",
     image: debateImg,
+    link: null,
+    linkLabel: null,
+  },
+  {
+    id: "makerere-incubation-certificate",
+    title: "Makerere Innovation and Incubation Center: Certificate of Participation",
+    description:
+      "Awarded by the MIIC Sub-Regional Hubs Support Program for taking part in the Lira University Ideathon for Student Innovation Sprint on 11 November 2026, contributing to problem identification, solution design and pitching in a team of innovators.",
+    image: makerereIncubationImg,
     link: null,
     linkLabel: null,
   },

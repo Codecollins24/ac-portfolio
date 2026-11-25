@@ -117,6 +117,17 @@ export default function ProjectModal({ project, onClose }) {
               Live Demo
             </a>
           )}
+          {project.demoRequestEmail && (
+            <a
+              href={`mailto:${project.demoRequestEmail}?subject=${encodeURIComponent(
+                `Demo link request: ${project.title}`
+              )}`}
+              className="btn btn-primary"
+            >
+              <Mail size={16} />
+              Request demo link
+            </a>
+          )}
           {project.codeRequestEmail && (
             <a
               href={`mailto:${project.codeRequestEmail}?subject=${encodeURIComponent(

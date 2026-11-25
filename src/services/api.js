@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Not used yet — every service currently reads local mock data.
+// Not used yet: every service currently reads local mock data.
 // Once the Django backend is deployed, set VITE_API_URL and swap the
 // Promise.resolve(...) calls in each service for apiClient.get(...) calls.
 const apiClient = axios.create({

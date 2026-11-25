@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ExternalLink, Code2, Info } from "lucide-react";
+import { ExternalLink, Code2, Info, Mail } from "lucide-react";
 import { getProjects } from "../services/projectsService";
 import ProjectModal from "./ProjectModal";
 import "./Projects.css";
@@ -106,6 +106,17 @@ export default function Projects() {
                     >
                       <ExternalLink size={16} />
                       Live Demo
+                    </a>
+                  )}
+                  {!project.demo && project.demoRequestEmail && (
+                    <a
+                      href={`mailto:${project.demoRequestEmail}?subject=${encodeURIComponent(
+                        `Demo link request: ${project.title}`
+                      )}`}
+                      className="btn btn-outline"
+                    >
+                      <Mail size={16} />
+                      Request Link
                     </a>
                   )}
                 </div>
