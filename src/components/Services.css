@@ -46,10 +46,14 @@
 .service-credential-btn {
   align-self: flex-start;
   margin-top: auto;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
   .services-grid {
-    grid-template-columns: 1fr;
+    /* minmax(0, ...) stops a card's content from widening the page on phones. */
+    grid-template-columns: minmax(0, 1fr);
   }
 }

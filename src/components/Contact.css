@@ -91,6 +91,17 @@
 
 @media (max-width: 800px) {
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Let long values and form fields shrink to fit narrow phones. */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact-info-link {
+    overflow-wrap: anywhere;
   }
 }

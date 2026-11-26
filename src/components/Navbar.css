@@ -45,6 +45,7 @@
   font-weight: 500;
   color: var(--color-text-muted);
   padding-bottom: var(--space-2);
+  white-space: nowrap;
   transition: color var(--transition-base);
 }
 
@@ -94,30 +95,72 @@
   display: none;
 }
 
+.navbar-backdrop,
 .navbar-mobile {
   display: none;
-  overflow: hidden;
-  border-top: 1px solid var(--color-border);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.navbar-backdrop {
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.55);
+  touch-action: none;
+}
+
+.navbar-mobile {
+  /* Scrolls on its own when the screen is short, e.g. a phone in landscape. */
+  max-height: calc(100vh - var(--nav-height));
+  max-height: calc(100dvh - var(--nav-height));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-mobile.glass {
+  border-radius: 0;
+  border-inline: none;
 }
 
 .navbar-mobile ul {
   display: flex;
   flex-direction: column;
-  padding: var(--space-4) var(--space-5) var(--space-5);
-  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  gap: var(--space-2);
 }
 
-.navbar-mobile a {
+.navbar-mobile-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-sm);
   font-size: var(--fs-base);
   font-weight: 500;
   color: var(--color-text-muted);
 }
 
-.navbar-mobile a.is-active {
+.navbar-mobile-link.is-active {
   color: var(--color-text);
+  background: var(--color-surface-hover);
 }
 
-@media (max-width: 860px) {
+/* Only needed where the header's own Request CV button is hidden. */
+.navbar-mobile-cv {
+  display: none;
+}
+
+.navbar-mobile-cv .btn {
+  width: 100%;
+}
+
+/* The full row of links needs about 1000px, so tablets get the menu too.
+   Keep in sync with DESKTOP_QUERY in Navbar.jsx. */
+@media (max-width: 1024px) {
   .navbar-links {
     display: none;
   }
@@ -127,10 +170,16 @@
     padding: 0.55rem 0.9rem;
   }
 
+  .navbar-icon-btn {
+    width: 44px;
+    height: 44px;
+  }
+
   .navbar-menu-btn {
     display: inline-flex;
   }
 
+  .navbar-backdrop,
   .navbar-mobile {
     display: block;
   }
@@ -139,5 +188,10 @@
 @media (max-width: 520px) {
   .navbar-cv-btn {
     display: none;
+  }
+
+  .navbar-mobile-cv {
+    display: block;
+    margin-top: var(--space-2);
   }
 }
